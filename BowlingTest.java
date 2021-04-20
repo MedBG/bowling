@@ -23,8 +23,6 @@ public class BowlingTest {
 
         for (int i = 0; i < 10; i++) {
             miss.roll(9);
-        }
-        for (int i = 0; i < 10; i++) {
             System.out.print("9- ");
         }
         System.out.println("\n Miss Score: "+miss.score());
@@ -36,9 +34,11 @@ public class BowlingTest {
 
         for (int i = 0; i < 21; i++) {
             spare.roll(5);
-        }
-        for (int i = 0; i < 11; i++) {
-            System.out.print("5/ ");
+            if(i%2==0){
+                System.out.print("5");
+            } else {
+                System.out.print("/ ");
+            }
         }
         System.out.println("\n Spare Score: "+spare.score());
         /* Spare Score */
